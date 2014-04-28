@@ -1,0 +1,509 @@
+<html><style>
+@import url(http://www.princexml.com/fonts/gentium/index.css) all;
+@page { size: 20cm 20cm; margin: 2cm 1cm; font: 14px "Trebuchet MS", sans-serif; }
+
+@page serial {
+  @top-left { content: string(code, first) " · "  string(country, first) } 
+  @top-right { content: string(country, last) " · " string(code, last) }
+}
+@page serial:right { 
+  @bottom-right { content: counter(page) }
+  @bottom-center { content: string(title) } 
+} 
+@page serial:left { 
+  @bottom-left { content: counter(page) } 
+  @bottom-center { content: string(title) } 
+}
+@page :first { 
+  background: url(bg.svg); 
+  @bottom-right { content: none }
+  @bottom-center { content: none }
+} 
+@page serial:blank { 
+  @top-left { content: none } 
+  @top-right { content: none }
+  @bottom-right { content: none }
+  @bottom-center { content: none }
+} 
+body { font: 12px sans-serif }
+div.chapter { columns: 2; -ro-columns: 2; column-fill: auto; page: serial } 
+table { border-collapse: collapse; } 
+td, th { border: thin solid black; text-align: left; vertical-align: top; padding: 2px 3px } 
+td.flag, td.country { padding: 10px }
+td.flag { border-right: hidden; } 
+td.country { string-set: country content(); 
+  font-size: 1.6em; 
+  text-align: right; } 
+td.code { string-set: code content() } 
+tr.country { height: 133px; background: #bbb } 
+thead tr { border-bottom: solid gray 2px }
+tfoot tr { border-top: solid gray 2px }
+col.price { text-align: right; background: #eee }
+img { width: 150px; xborder: thin solid black; padding: 0; margin: 0 } 
+div.frontcover { page-break-after: always; font-family: Gentium }
+div.frontcover h1 { font-size: 50px; margin-top: 175px; text-align: center; 
+  text-transform: uppercase; string-set: title content() }
+div.frontcover h2 { font-size: 30px; margin-top: 160px; text-align: center; 
+  string-set: subtitle content() }  
+div.backcover { page-break-before: left; text-align: center } 
+div.backcover img { margin: 4em auto } 
+@media screen { 
+  div.frontcover h1 { margin: 1em 0 }
+  div.frontcover h2 { margin: 1em 0 }
+  div.chapter table { margin: 0 auto }
+}
+</style>
+<body>
+<div class="frontcover"><h1>Flags of the nations</h1><h2>product catalog</h2></div>
+<div class="chapter">
+<table>
+<col/>
+<col/>
+<col/>
+<col class="price"/>
+<thead><tr><th>Product<th>Width&nbsp;(cm)<th>Material<th>Price</tr></thead>
+<tfoot><tr><th>Product<th>Width&nbsp;(cm)<th>Material<th>Price</tr></tfoot>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Afghanistan.svg"></td><td colspan=2 class="country">Afghanistan</td></tr>
+<tr><td class="code">FL11C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL11P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL11H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL12C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL12P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL12H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL13C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL13P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL13H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg"></td><td colspan=2 class="country">Algeria</td></tr>
+<tr><td class="code">FL21C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL21P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL21H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL22C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL22P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL22H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL23C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL23P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL23H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Andorra.svg"></td><td colspan=2 class="country">Andorra</td></tr>
+<tr><td class="code">FL31C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL31P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL31H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL32C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL32P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL32H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL33C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL33P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL33H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Angola.svg"></td><td colspan=2 class="country">Angola</td></tr>
+<tr><td class="code">FL41C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL41P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL41H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL42C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL42P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL42H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL43C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL43P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL43H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/8/89/Flag_of_Antigua_and_Barbuda.svg"></td><td colspan=2 class="country">Antigua and Barbuda</td></tr>
+<tr><td class="code">FL51C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL51P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL51H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL52C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL52P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL52H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL53C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL53P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL53H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg"></td><td colspan=2 class="country">Argentina</td></tr>
+<tr><td class="code">FL61C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL61P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL61H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL62C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL62P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL62H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL63C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL63P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL63H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Armenia.svg"></td><td colspan=2 class="country">Armenia</td></tr>
+<tr><td class="code">FL71C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL71P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL71H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL72C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL72P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL72H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL73C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL73P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL73H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg"></td><td colspan=2 class="country">Australia</td></tr>
+<tr><td class="code">FL81C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL81P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL81H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL82C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL82P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL82H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL83C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL83P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL83H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Austria.svg"></td><td colspan=2 class="country">Austria</td></tr>
+<tr><td class="code">FL91C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL91P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL91H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL92C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL92P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL92H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL93C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL93P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL93H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Azerbaijan.svg"></td><td colspan=2 class="country">Azerbaijan</td></tr>
+<tr><td class="code">FL101C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL101P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL101H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL102C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL102P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL102H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL103C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL103P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL103H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Bahrain.svg"></td><td colspan=2 class="country">Bahrain</td></tr>
+<tr><td class="code">FL111C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL111P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL111H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL112C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL112P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL112H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL113C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL113P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL113H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg"></td><td colspan=2 class="country">Bangladesh</td></tr>
+<tr><td class="code">FL121C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL121P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL121H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL122C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL122P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL122H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL123C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL123P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL123H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_Barbados.svg"></td><td colspan=2 class="country">Barbados</td></tr>
+<tr><td class="code">FL131C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL131P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL131H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL132C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL132P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL132H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL133C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL133P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL133H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/8/85/Flag_of_Belarus.svg"></td><td colspan=2 class="country">Belarus</td></tr>
+<tr><td class="code">FL141C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL141P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL141H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL142C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL142P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL142H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL143C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL143P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL143H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg"></td><td colspan=2 class="country">Belgium</td></tr>
+<tr><td class="code">FL151C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL151P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL151H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL152C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL152P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL152H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL153C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL153P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL153H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Benin.svg"></td><td colspan=2 class="country">Benin</td></tr>
+<tr><td class="code">FL161C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL161P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL161H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL162C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL162P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL162H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL163C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL163P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL163H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_Botswana.svg"></td><td colspan=2 class="country">Botswana</td></tr>
+<tr><td class="code">FL171C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL171P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL171H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL172C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL172P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL172H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL173C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL173P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL173H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Brunei.svg"></td><td colspan=2 class="country">Brunei</td></tr>
+<tr><td class="code">FL181C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL181P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL181H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL182C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL182P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL182H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL183C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL183P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL183H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg"></td><td colspan=2 class="country">Bulgaria</td></tr>
+<tr><td class="code">FL191C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL191P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL191H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL192C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL192P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL192H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL193C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL193P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL193H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Burkina_Faso.svg"></td><td colspan=2 class="country">Burkina Faso</td></tr>
+<tr><td class="code">FL201C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL201P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL201H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL202C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL202P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL202H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL203C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL203P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL203H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/5/50/Flag_of_Burundi.svg"></td><td colspan=2 class="country">Burundi</td></tr>
+<tr><td class="code">FL211C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL211P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL211H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL212C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL212P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL212H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL213C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL213P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL213H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_Cambodia.svg"></td><td colspan=2 class="country">Cambodia</td></tr>
+<tr><td class="code">FL221C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL221P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL221H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL222C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL222P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL222H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL223C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL223P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL223H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/4/4f/Flag_of_Cameroon.svg"></td><td colspan=2 class="country">Cameroon</td></tr>
+<tr><td class="code">FL231C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL231P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL231H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL232C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL232P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL232H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL233C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL233P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL233H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg"></td><td colspan=2 class="country">Canada</td></tr>
+<tr><td class="code">FL241C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL241P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL241H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL242C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL242P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL242H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL243C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL243P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL243H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Cape_Verde.svg"></td><td colspan=2 class="country">Cape Verde</td></tr>
+<tr><td class="code">FL251C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL251P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL251H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL252C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL252P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL252H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL253C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL253P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL253H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/4/4b/Flag_of_Chad.svg"></td><td colspan=2 class="country">Chad</td></tr>
+<tr><td class="code">FL261C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL261P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL261H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL262C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL262P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL262H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL263C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL263P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL263H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg"></td><td colspan=2 class="country">Chile</td></tr>
+<tr><td class="code">FL271C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL271P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL271H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL272C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL272P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL272H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL273C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL273P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL273H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"></td><td colspan=2 class="country">Colombia</td></tr>
+<tr><td class="code">FL281C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL281P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL281H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL282C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL282P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL282H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL283C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL283P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL283H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/8/86/Flag_of_Cote_d%27Ivoire.svg"></td><td colspan=2 class="country">Cote d'Ivoire</td></tr>
+<tr><td class="code">FL291C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL291P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL291H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL292C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL292P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL292H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL293C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL293P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL293H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Croatia.svg"></td><td colspan=2 class="country">Croatia</td></tr>
+<tr><td class="code">FL301C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL301P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL301H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL302C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL302P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL302H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL303C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL303P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL303H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/b/bd/Flag_of_Cuba.svg"></td><td colspan=2 class="country">Cuba</td></tr>
+<tr><td class="code">FL311C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL311P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL311H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL312C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL312P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL312H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL313C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL313P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL313H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Cyprus.svg"></td><td colspan=2 class="country">Cyprus</td></tr>
+<tr><td class="code">FL321C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL321P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL321H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL322C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL322P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL322H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL323C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL323P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL323H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/4/45/Flag_of_Ireland.svg"></td><td colspan=2 class="country">Ireland</td></tr>
+<tr><td class="code">FL331C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL331P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL331H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL332C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL332P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL332H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL333C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL333P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL333H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Sweden.svg"></td><td colspan=2 class="country">Sweden</td></tr>
+<tr><td class="code">FL341C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL341P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL341H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL342C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL342P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL342H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL343C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL343P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL343H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg"></td><td colspan=2 class="country">Switzerland</td></tr>
+<tr><td class="code">FL351C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL351P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL351H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL352C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL352P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL352H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL353C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL353P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL353H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/9/93/Flag_of_the_Bahamas.svg"></td><td colspan=2 class="country">The Bahamas</td></tr>
+<tr><td class="code">FL361C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL361P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL361H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL362C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL362P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL362H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL363C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL363P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL363H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/6/6f/Flag_of_the_Central_African_Republic.svg"></td><td colspan=2 class="country">The Central African Republic</td></tr>
+<tr><td class="code">FL371C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL371P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL371H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL372C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL372P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL372H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL373C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL373P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL373H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/9/94/Flag_of_the_Comoros.svg"></td><td colspan=2 class="country">The Comoros</td></tr>
+<tr><td class="code">FL381C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL381P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL381H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL382C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL382P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL382H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL383C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL383P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL383H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_Czech_Republic.svg"></td><td colspan=2 class="country">The Czech Republic</td></tr>
+<tr><td class="code">FL391C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL391P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL391H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL392C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL392P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL392H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL393C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL393P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL393H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg"></td><td colspan=2 class="country">The Democratic Republic of The Congo</td></tr>
+<tr><td class="code">FL401C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL401P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL401H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL402C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL402P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL402H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL403C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL403P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL403H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg"></td><td colspan=2 class="country">The People's Republic of China</td></tr>
+<tr><td class="code">FL411C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL411P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL411H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL412C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL412P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL412H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL413C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL413P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL413H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/7/72/Flag_of_the_Republic_of_China.svg"></td><td colspan=2 class="country">The Republic of China</td></tr>
+<tr><td class="code">FL421C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL421P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL421H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL422C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL422P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL422H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL423C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL423P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL423H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_the_Republic_of_the_Congo.svg"></td><td colspan=2 class="country">The Republic of The Congo</td></tr>
+<tr><td class="code">FL431C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL431P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL431H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL432C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL432P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL432H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL433C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL433P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL433H<td>60<td>Hemp<td>3650</tr>
+<tr class="country"><td colspan=2 class="flag"><img src="http://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"></td><td colspan=2 class="country">United States of America</td></tr>
+<tr><td class="code">FL441C<td>20<td>Cotton<td>550</tr>
+<tr><td class="code">FL441P<td>20<td>Polyester<td>500</tr>
+<tr><td class="code">FL441H<td>20<td>Hemp<td>450</tr>
+<tr><td class="code">FL442C<td>40<td>Cotton<td>1750</tr>
+<tr><td class="code">FL442P<td>40<td>Polyester<td>1700</tr>
+<tr><td class="code">FL442H<td>40<td>Hemp<td>1650</tr>
+<tr><td class="code">FL443C<td>60<td>Cotton<td>3750</tr>
+<tr><td class="code">FL443P<td>60<td>Polyester<td>3700</tr>
+<tr><td class="code">FL443H<td>60<td>Hemp<td>3650</tr>
+</table>
+</div>
+<div class="backcover"><img src="http://www.princexml.com/howcome/2008/flags/bg.svg"/></div>
+</html>
